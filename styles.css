@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+main {
+  background-color: #f7fdfc;
+  max-width: 375px;
+  padding: 24px;
+}
+
+@media screen and (min-width: 380px) and (max-width: 968px) {
+  main {
+    margin: 2em auto;
+  }
+}
+
+h1 {
+  margin-block: 40px 12px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.training-header p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  word-wrap: break-word;
+  color: #737373;
+}
+
+.desktop-info {
+  display: none;
+}
+
+form {
+  margin-top: 40px;
+  border-radius: 6px;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.05);
+}
+
+form div {
+  margin-bottom: 24px;
+}
+
+form div:has(img) {
+  position: relative;
+}
+
+form div img {
+  position: absolute;
+  display: inline-block;
+  right: 12px;
+  bottom: 15px;
+}
+
+img:not(.big) {
+  padding: 3px;
+  bottom: 17px;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 14px 52px 14px 16px;
+}
+input[id="firstName"] {
+  border: 2px solid #2ec4b6;
+  font-weight: 400;
+}
+input::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+}
+
+button {
+  background-color: #2ec4b6;
+  color: white;
+  font-size: 16px;
+  font-family: Sofia Pro;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-align: center;
+  border: none;
+  margin-bottom: 30px;
+}
+.terms {
+  padding-left: 6px;
+  padding-right: 5px;
+  margin-top: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+}
+a {
+  color: #2ec4b6;
+  font-size: 14px;
+  text-decoration: underline;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    max-width: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  .training-header {
+    width: 350px;
+  }
+  .training-header img {
+    width: 77.33px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .mobile-info {
+    display: none;
+  }
+  .desktop-info {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    word-wrap: break-word;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    width: fit-content;
+    padding: 40px;
+    gap: 16px 24px;
+  }
+
+  .activityLevel,
+  .password,
+  button,
+  .terms {
+    grid-column: span 2;
+  }
+
+  .terms {
+    padding: 4px;
+    margin-top: -16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 10px 140px 40px 115px;
+  }
+  .training-header {
+    width: unset;
+  }
+  h1 {
+    font-size: 40px;
+    margin-block: 50px 20px;
+  }
+  .desktop-info {
+    max-width: 456px;
+  }
+}
